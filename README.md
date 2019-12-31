@@ -5,7 +5,7 @@
 # [Monitoring Dashboards: Node.js Client](https://github.com/googleapis/nodejs-monitoring-dashboards)
 
 [![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
-[![npm version](https://img.shields.io/npm/v/dashboard.svg)](https://www.npmjs.org/package/dashboard)
+[![npm version](https://img.shields.io/npm/v/@google-cloud/monitoring-dashboards.svg)](https://www.npmjs.org/package/@google-cloud/monitoring-dashboards)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-monitoring-dashboards/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-monitoring-dashboards)
 
 
@@ -48,7 +48,7 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 ### Installing the client library
 
 ```bash
-npm install dashboard
+npm install @google-cloud/monitoring-dashboards
 ```
 
 
