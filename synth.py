@@ -27,7 +27,7 @@ for version in versions:
   library = gapic.typescript_library(
     'monitoring-dashboard',
     generator_args={
-      'package-name': '@google-cloud/monitoring-dashboard'
+      'package-name': '@google-cloud/monitoring-dashboards'
     },
     proto_path='/google/monitoring/dashboard/v1',
     version=version)

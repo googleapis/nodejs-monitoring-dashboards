@@ -18,7 +18,7 @@
 
 
 /* eslint-disable node/no-missing-require, no-unused-vars */
-const dashboard = require('@google-cloud/monitoring-dashboard');
+const dashboard = require('@google-cloud/monitoring-dashboards');
 
 function main() {
   const dashboardsServiceClient = new dashboard.DashboardsServiceClient();

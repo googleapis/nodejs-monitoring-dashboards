@@ -16,7 +16,7 @@
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 
-import {DashboardsServiceClient} from '@google-cloud/monitoring-dashboard';
+import {DashboardsServiceClient} from '@google-cloud/monitoring-dashboards';
 
 function main() {
   const dashboardsServiceClient = new DashboardsServiceClient();
