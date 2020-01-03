@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-01-03T21:48:44.959752Z",
+  "updateTime": "2020-01-03T23:15:47.825328Z",
   "sources": [
     {
       "git": {
@@ -34,9 +34,6 @@
     },
     {
       "path": ".prettierignore"
-    },
-    {
-      "path": "package-lock.json"
     },
     {
       "path": ".eslintignore"
@@ -237,7 +234,7 @@
       "path": ".kokoro/release/docs.sh"
     },
     {
-      "path": "__pycache__/synth.cpython-37.pyc"
+      "path": "samples/README.md"
     },
     {
       "path": ".github/PULL_REQUEST_TEMPLATE.md"
