@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-01-03T18:52:18.610813Z",
+  "updateTime": "2020-01-03T18:57:09.077089Z",
   "sources": [
     {
       "git": {
@@ -21,7 +21,7 @@
     {
       "client": {
         "source": "googleapis",
-        "apiName": "@google-cloud/monitoring-dashboard",
+        "apiName": "monitoring-dashboard",
         "apiVersion": "v1",
         "language": "typescript",
         "generator": "gapic-generator-typescript"
@@ -34,6 +34,9 @@
     },
     {
       "path": ".prettierignore"
+    },
+    {
+      "path": "package-lock.json"
     },
     {
       "path": ".eslintignore"

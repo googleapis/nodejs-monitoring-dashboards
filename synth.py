@@ -25,7 +25,7 @@ gapic = gcp.GAPICMicrogenerator()
 versions = ['v1']
 for version in versions:
   library = gapic.typescript_library(
-    '@google-cloud/monitoring-dashboard',
+    'monitoring-dashboard',
     generator_args={
       'package-name': '@google-cloud/monitoring-dashboard'
     },
