@@ -2,7 +2,7 @@
   "name": "@google-cloud/monitoring-dashboards",
   "version": "0.1.0",
   "description": "Dashboard client for Node.js",
-  "repository": "googleapis/nodejs-dashboard",
+  "repository": "googleapis/nodejs-monitoring-dashboards",
   "license": "Apache-2.0",
   "author": "Google LLC",
   "files": [
