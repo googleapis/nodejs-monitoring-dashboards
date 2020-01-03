@@ -11,7 +11,7 @@
 
 
 
-Dashboard client for Node.js
+interact with dashboards for viewing and analyzing metric data
 
 
 * [Monitoring Dashboards Node.js Client API Reference][client-docs]
