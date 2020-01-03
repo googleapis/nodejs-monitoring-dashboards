@@ -1,12 +1,12 @@
 {
-  "updateTime": "2019-12-31T00:00:45.323754Z",
+  "updateTime": "2020-01-03T18:52:18.610813Z",
   "sources": [
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "a202fb3b91cd0e4231be878b0348afd17067cbe2",
-        "internalRef": "287379998"
+        "sha": "91ef2d9dd69807b0b79555f22566fb2d81e49ff9",
+        "internalRef": "287999179"
       }
     },
     {
@@ -123,10 +123,13 @@
       "path": "protos/google/monitoring/dashboard/v1/dashboards_service.proto"
     },
     {
-      "path": "system-test/.eslintrc.yml"
+      "path": "system-test/install.ts"
     },
     {
-      "path": "system-test/install.ts"
+      "path": "system-test/fixtures/sample/src/index.js"
+    },
+    {
+      "path": "system-test/fixtures/sample/src/index.ts"
     },
     {
       "path": ".kokoro/test.sh"
@@ -231,10 +234,10 @@
       "path": ".kokoro/release/docs.sh"
     },
     {
-      "path": ".github/PULL_REQUEST_TEMPLATE.md"
+      "path": "__pycache__/synth.cpython-37.pyc"
     },
     {
-      "path": ".github/release-please.yml"
+      "path": ".github/PULL_REQUEST_TEMPLATE.md"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/support_request.md"

@@ -187,6 +187,9 @@ export class DashboardsServiceClient {
     for (const methodName of dashboardsServiceStubMethods) {
       const innerCallPromise = this.dashboardsServiceStub.then(
         stub => (...args: Array<{}>) => {
+          if (this._terminated) {
+            return Promise.reject('The client has already been closed.');
+          }
           return stub[methodName].apply(stub, args);
         },
         (err: Error | null | undefined) => () => {
@@ -207,9 +210,6 @@ export class DashboardsServiceClient {
         callOptions?: CallOptions,
         callback?: APICallback
       ) => {
-        if (this._terminated) {
-          return Promise.reject('The client has already been closed.');
-        }
         return apiCall(argument, callOptions, callback);
       };
     }
