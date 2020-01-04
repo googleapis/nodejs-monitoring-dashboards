@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-01-03T23:26:56.615202Z",
+  "updateTime": "2020-01-03T23:59:54.480249Z",
   "sources": [
     {
       "git": {
@@ -34,9 +34,6 @@
     },
     {
       "path": ".prettierignore"
-    },
-    {
-      "path": "package-lock.json"
     },
     {
       "path": ".eslintignore"
