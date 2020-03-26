@@ -23,4 +23,4 @@ export {v1, DashboardsServiceClient};
 // tslint:disable-next-line no-default-export
 export default {v1, DashboardsServiceClient};
 import * as protos from '../protos/protos';
-export {protos};
+export {protos}
