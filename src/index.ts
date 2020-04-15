@@ -21,4 +21,4 @@ const DashboardsServiceClient = v1.DashboardsServiceClient;
 export {v1, DashboardsServiceClient};
 export default {v1, DashboardsServiceClient};
 import * as protos from '../protos/protos';
-export {protos};
+export {protos}
