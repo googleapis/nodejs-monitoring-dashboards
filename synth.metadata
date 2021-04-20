@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-monitoring-dashboards.git",
-        "sha": "87b8645d220c9af042ef8022e36c6e3e39ca4444"
+        "sha": "0c4f7634825e8ac725be4deca549b46429b0136e"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "4f5e3aeabb80833f0cfd6dd570a7b18787d3a844",
-        "internalRef": "363712862"
+        "sha": "59cea2c540441a74df5d7d861c3238377cccf9c6",
+        "internalRef": "369326004"
       }
     },
     {
