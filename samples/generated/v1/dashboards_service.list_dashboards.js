@@ -12,50 +12,52 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(parent, dashboard) {
-  // [START dashboard_create_dashboard_sample]
+function main(parent) {
+  // [START dashboard_list_dashboards_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The project on which to execute the request. The format is:
+   *  Required. The scope of the dashboards to list. The format is:
    *      projects/[PROJECT_ID_OR_NUMBER]
-   *  The `[PROJECT_ID_OR_NUMBER]` must match the dashboard resource name.
    */
   // const parent = 'abc123'
   /**
-   *  Required. The initial dashboard specification.
+   *  A positive number that is the maximum number of results to return.
+   *  If unspecified, a default of 1000 is used.
    */
-  // const dashboard = ''
+  // const pageSize = 1234
   /**
-   *  If set, validate the request and preview the review, but do not actually
-   *  save it.
+   *  If this field is not empty then it must contain the `nextPageToken` value
+   *  returned by a previous call to this method.  Using this field causes the
+   *  method to return additional results from the previous method call.
    */
-  // const validateOnly = true
+  // const pageToken = 'abc123'
 
   // Imports the Dashboard library
-  const {DashboardsServiceClient} = require('@google-cloud/monitoring-dashboards').v1;
+  const {DashboardsServiceClient} =
+    require('@google-cloud/monitoring-dashboards').v1;
 
   // Instantiates a client
   const dashboardClient = new DashboardsServiceClient();
 
-  async function createDashboard() {
+  async function listDashboards() {
     // Construct request
     const request = {
       parent,
-      dashboard,
     };
 
     // Run request
-    const response = await dashboardClient.createDashboard(request);
-    console.log(response);
+    const iterable = await dashboardClient.listDashboardsAsync(request);
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  createDashboard();
-  // [END dashboard_create_dashboard_sample]
+  listDashboards();
+  // [END dashboard_list_dashboards_sample]
 }
 
 process.on('unhandledRejection', err => {

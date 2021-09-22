@@ -12,43 +12,39 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(dashboard) {
-  // [START dashboard_update_dashboard_sample]
+function main(name) {
+  // [START dashboard_delete_dashboard_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The dashboard that will replace the existing dashboard.
+   *  Required. The resource name of the Dashboard. The format is:
+   *      projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]
    */
-  // const dashboard = ''
-  /**
-   *  If set, validate the request and preview the review, but do not actually
-   *  save it.
-   */
-  // const validateOnly = true
+  // const name = 'abc123'
 
   // Imports the Dashboard library
-  const {DashboardsServiceClient} = require('@google-cloud/monitoring-dashboards').v1;
+  const {DashboardsServiceClient} =
+    require('@google-cloud/monitoring-dashboards').v1;
 
   // Instantiates a client
   const dashboardClient = new DashboardsServiceClient();
 
-  async function updateDashboard() {
+  async function deleteDashboard() {
     // Construct request
     const request = {
-      dashboard,
+      name,
     };
 
     // Run request
-    const response = await dashboardClient.updateDashboard(request);
+    const response = await dashboardClient.deleteDashboard(request);
     console.log(response);
   }
 
-  updateDashboard();
-  // [END dashboard_update_dashboard_sample]
+  deleteDashboard();
+  // [END dashboard_delete_dashboard_sample]
 }
 
 process.on('unhandledRejection', err => {

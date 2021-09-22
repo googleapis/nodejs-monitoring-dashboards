@@ -12,52 +12,43 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(parent) {
-  // [START dashboard_list_dashboards_sample]
+function main(dashboard) {
+  // [START dashboard_update_dashboard_sample]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The scope of the dashboards to list. The format is:
-   *      projects/[PROJECT_ID_OR_NUMBER]
+   *  Required. The dashboard that will replace the existing dashboard.
    */
-  // const parent = 'abc123'
+  // const dashboard = ''
   /**
-   *  A positive number that is the maximum number of results to return.
-   *  If unspecified, a default of 1000 is used.
+   *  If set, validate the request and preview the review, but do not actually
+   *  save it.
    */
-  // const pageSize = 1234
-  /**
-   *  If this field is not empty then it must contain the `nextPageToken` value
-   *  returned by a previous call to this method.  Using this field causes the
-   *  method to return additional results from the previous method call.
-   */
-  // const pageToken = 'abc123'
+  // const validateOnly = true
 
   // Imports the Dashboard library
-  const {DashboardsServiceClient} = require('@google-cloud/monitoring-dashboards').v1;
+  const {DashboardsServiceClient} =
+    require('@google-cloud/monitoring-dashboards').v1;
 
   // Instantiates a client
   const dashboardClient = new DashboardsServiceClient();
 
-  async function listDashboards() {
+  async function updateDashboard() {
     // Construct request
     const request = {
-      parent,
+      dashboard,
     };
 
     // Run request
-    const iterable = await dashboardClient.listDashboardsAsync(request);
-    for await (const response of iterable) {
-        console.log(response);
-    }
+    const response = await dashboardClient.updateDashboard(request);
+    console.log(response);
   }
 
-  listDashboards();
-  // [END dashboard_list_dashboards_sample]
+  updateDashboard();
+  // [END dashboard_update_dashboard_sample]
 }
 
 process.on('unhandledRejection', err => {
