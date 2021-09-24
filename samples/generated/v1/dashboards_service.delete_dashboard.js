@@ -12,41 +12,39 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
 function main(name) {
-  // [START dashboard_v1_generated_DashboardsService_GetDashboard_async]
+  // [START dashboard_v1_generated_DashboardsService_DeleteDashboard_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The resource name of the Dashboard. The format is one of:
-   *   -  `dashboards/[DASHBOARD_ID]` (for system dashboards)
-   *   -  `projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]`
-   *        (for custom dashboards).
+   *  Required. The resource name of the Dashboard. The format is:
+   *      projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]
    */
   // const name = 'abc123'
 
   // Imports the Dashboard library
-  const {DashboardsServiceClient} = require('@google-cloud/monitoring-dashboards').v1;
+  const {DashboardsServiceClient} =
+    require('@google-cloud/monitoring-dashboards').v1;
 
   // Instantiates a client
   const dashboardClient = new DashboardsServiceClient();
 
-  async function getDashboard() {
+  async function deleteDashboard() {
     // Construct request
     const request = {
       name,
     };
 
     // Run request
-    const response = await dashboardClient.getDashboard(request);
+    const response = await dashboardClient.deleteDashboard(request);
     console.log(response);
   }
 
-  getDashboard();
-  // [END dashboard_v1_generated_DashboardsService_GetDashboard_async]
+  deleteDashboard();
+  // [END dashboard_v1_generated_DashboardsService_DeleteDashboard_async]
 }
 
 process.on('unhandledRejection', err => {

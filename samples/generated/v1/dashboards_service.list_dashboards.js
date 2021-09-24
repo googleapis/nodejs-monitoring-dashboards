@@ -12,43 +12,52 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(dashboard) {
-  // [START dashboard_v1_generated_DashboardsService_UpdateDashboard_async]
+function main(parent) {
+  // [START dashboard_v1_generated_DashboardsService_ListDashboards_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The dashboard that will replace the existing dashboard.
+   *  Required. The scope of the dashboards to list. The format is:
+   *      projects/[PROJECT_ID_OR_NUMBER]
    */
-  // const dashboard = ''
+  // const parent = 'abc123'
   /**
-   *  If set, validate the request and preview the review, but do not actually
-   *  save it.
+   *  A positive number that is the maximum number of results to return.
+   *  If unspecified, a default of 1000 is used.
    */
-  // const validateOnly = true
+  // const pageSize = 1234
+  /**
+   *  If this field is not empty then it must contain the `nextPageToken` value
+   *  returned by a previous call to this method.  Using this field causes the
+   *  method to return additional results from the previous method call.
+   */
+  // const pageToken = 'abc123'
 
   // Imports the Dashboard library
-  const {DashboardsServiceClient} = require('@google-cloud/monitoring-dashboards').v1;
+  const {DashboardsServiceClient} =
+    require('@google-cloud/monitoring-dashboards').v1;
 
   // Instantiates a client
   const dashboardClient = new DashboardsServiceClient();
 
-  async function updateDashboard() {
+  async function listDashboards() {
     // Construct request
     const request = {
-      dashboard,
+      parent,
     };
 
     // Run request
-    const response = await dashboardClient.updateDashboard(request);
-    console.log(response);
+    const iterable = await dashboardClient.listDashboardsAsync(request);
+    for await (const response of iterable) {
+      console.log(response);
+    }
   }
 
-  updateDashboard();
-  // [END dashboard_v1_generated_DashboardsService_UpdateDashboard_async]
+  listDashboards();
+  // [END dashboard_v1_generated_DashboardsService_ListDashboards_async]
 }
 
 process.on('unhandledRejection', err => {

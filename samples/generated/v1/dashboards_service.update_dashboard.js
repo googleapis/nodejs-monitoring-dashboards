@@ -12,22 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(parent, dashboard) {
-  // [START dashboard_v1_generated_DashboardsService_CreateDashboard_async]
+function main(dashboard) {
+  // [START dashboard_v1_generated_DashboardsService_UpdateDashboard_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The project on which to execute the request. The format is:
-   *      projects/[PROJECT_ID_OR_NUMBER]
-   *  The `[PROJECT_ID_OR_NUMBER]` must match the dashboard resource name.
-   */
-  // const parent = 'abc123'
-  /**
-   *  Required. The initial dashboard specification.
+   *  Required. The dashboard that will replace the existing dashboard.
    */
   // const dashboard = ''
   /**
@@ -37,25 +30,25 @@ function main(parent, dashboard) {
   // const validateOnly = true
 
   // Imports the Dashboard library
-  const {DashboardsServiceClient} = require('@google-cloud/monitoring-dashboards').v1;
+  const {DashboardsServiceClient} =
+    require('@google-cloud/monitoring-dashboards').v1;
 
   // Instantiates a client
   const dashboardClient = new DashboardsServiceClient();
 
-  async function createDashboard() {
+  async function updateDashboard() {
     // Construct request
     const request = {
-      parent,
       dashboard,
     };
 
     // Run request
-    const response = await dashboardClient.createDashboard(request);
+    const response = await dashboardClient.updateDashboard(request);
     console.log(response);
   }
 
-  createDashboard();
-  // [END dashboard_v1_generated_DashboardsService_CreateDashboard_async]
+  updateDashboard();
+  // [END dashboard_v1_generated_DashboardsService_UpdateDashboard_async]
 }
 
 process.on('unhandledRejection', err => {
